@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.16",
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
@@ -22,10 +23,10 @@
     "web-vitals": "^0.2.2"
   },
   "scripts": {
-    "start": "../node_modules/.bin/react-scripts start",
-    "build": "../node_modules/.bin/react-scripts build",
-    "test": "../node_modules/.bin/react-scripts test",
-    "eject": "../node_modules/.bin/react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.4.1"
   }
 }
