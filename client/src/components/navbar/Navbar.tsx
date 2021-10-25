@@ -5,6 +5,9 @@ import {
     Flex,
     Icon,
     IconButton,
+    Input,
+    InputGroup,
+    InputLeftElement,
     Link,
     Popover,
     PopoverContent,
@@ -16,7 +19,7 @@ import {
     useDisclosure
 } from "@chakra-ui/react";
 import React from "react";
-import {ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon} from "@chakra-ui/icons";
+import {ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon, SearchIcon} from "@chakra-ui/icons";
 
 export default function WithSubnavigation() {
     const {isOpen, onToggle} = useDisclosure();
@@ -46,7 +49,8 @@ export default function WithSubnavigation() {
                         aria-label={'Toggle Navigation'}
                     />
                 </Flex>
-                <Flex flex={{base: 1}} justify={{base: 'center', md: 'start'}}>
+                <Flex flex={{base: 1}} justify={{base: 'center', md: 'start'}} alignItems={'center'}
+                >
                     <Text
                         textAlign={useBreakpointValue({base: 'center', md: 'left'})}
                         fontFamily={'heading'}
@@ -54,11 +58,10 @@ export default function WithSubnavigation() {
                         Logo
                     </Text>
 
-                    <Flex display={{base: 'none', md: 'flex'}} ml={10}>
+                    <Flex display={{base: 'none', md: 'flex'}} ml={5}>
                         <DesktopNav/>
                     </Flex>
                 </Flex>
-
                 <Stack
                     flex={{base: 1, md: 0}}
                     justify={'flex-end'}
@@ -77,10 +80,10 @@ export default function WithSubnavigation() {
                         fontSize={'sm'}
                         fontWeight={600}
                         color={'white'}
-                        bg={'pink.400'}
+                        bg={'teal.400'}
                         href={'#'}
                         _hover={{
-                            bg: 'pink.300',
+                            bg: 'teal.300',
                         }}>
                         Sign Up
                     </Button>
@@ -100,7 +103,7 @@ const DesktopNav = () => {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Stack direction={'row'} spacing={4}>
+        <Stack direction={'row'} spacing={4} align={'center'}>
             {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -111,6 +114,7 @@ const DesktopNav = () => {
                                 fontSize={'sm'}
                                 fontWeight={500}
                                 color={linkColor}
+                                whiteSpace={'nowrap'}
                                 _hover={{
                                     textDecoration: 'none',
                                     color: linkHoverColor,
@@ -137,6 +141,14 @@ const DesktopNav = () => {
                     </Popover>
                 </Box>
             ))}
+            <InputGroup width={'50%'} ml={5}>
+                <InputLeftElement
+                    pointerEvents="none"
+                    children={<SearchIcon color="gray.300"/>}
+                />
+                <Input type="tel" placeholder="Phone number" colorScheme={'teal'}
+                       focusBorderColor={'teal.400'}/>
+            </InputGroup>
         </Stack>
     );
 };
@@ -181,6 +193,14 @@ const MobileNav = () => {
             bg={useColorModeValue('white', 'gray.800')}
             p={4}
             display={{md: 'none'}}>
+            <InputGroup my={1}>
+                <InputLeftElement
+                    pointerEvents="none"
+                    children={<SearchIcon color="gray.300"/>}
+                />
+                <Input type="text" placeholder="Placeholder..." colorScheme={'teal'}
+                       focusBorderColor={'teal.400'}/>
+            </InputGroup>
             {NAV_ITEMS.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
