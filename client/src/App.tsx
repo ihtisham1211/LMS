@@ -8,7 +8,6 @@ import {Home} from "./pages/home/Home";
 export const App = () => (
     <ChakraProvider theme={theme}>
         <WithSubnavigation/>
-
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
