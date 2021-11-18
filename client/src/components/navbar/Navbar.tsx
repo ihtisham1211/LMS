@@ -20,6 +20,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import {ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon, SearchIcon} from "@chakra-ui/icons";
+import {NAV_ITEMS} from "../../utils/constants";
+import {NavItem} from "../../utils/types";
 
 export default function WithSubnavigation() {
     const {isOpen, onToggle} = useDisclosure();
@@ -258,50 +260,4 @@ const MobileNavItem = ({label, children, href}: NavItem) => {
     );
 };
 
-interface NavItem {
-    label: string;
-    subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
-}
 
-const NAV_ITEMS: Array<NavItem> = [
-    {
-        label: 'Inspiration',
-        children: [
-            {
-                label: 'Explore Design Work',
-                subLabel: 'Trending Design to inspire you',
-                href: '#',
-            },
-            {
-                label: 'New & Noteworthy',
-                subLabel: 'Up-and-coming Designers',
-                href: '#',
-            },
-        ],
-    },
-    {
-        label: 'Find Work',
-        children: [
-            {
-                label: 'Job Board',
-                subLabel: 'Find your dream design job',
-                href: '#',
-            },
-            {
-                label: 'Freelance Projects',
-                subLabel: 'An exclusive list for contract work',
-                href: '#',
-            },
-        ],
-    },
-    {
-        label: 'Learn Design',
-        href: '#',
-    },
-    {
-        label: 'Hire Designers',
-        href: '#',
-    },
-];
