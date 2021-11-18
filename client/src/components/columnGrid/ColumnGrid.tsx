@@ -1,5 +1,5 @@
 import {FcAssistant, FcDonate, FcInTransit} from "react-icons/all";
-import {Box, Flex, Icon, SimpleGrid, Stack, Text} from "@chakra-ui/react";
+import {Box, Center, Flex, Icon, SimpleGrid, Stack, Text} from "@chakra-ui/react";
 import React, {ReactElement} from "react";
 
 interface FeatureProps {
@@ -10,27 +10,30 @@ interface FeatureProps {
 
 const Feature = ({title, text, icon}: FeatureProps) => {
     return (
-        <Stack>
-            <Flex
-                w={16}
-                h={16}
-                align={'center'}
-                justify={'center'}
-                color={'white'}
-                rounded={'full'}
-                bg={'gray.100'}
-                mb={1}>
-                {icon}
-            </Flex>
-            <Text fontWeight={600}>{title}</Text>
-            <Text color={'gray.600'}>{text}</Text>
-        </Stack>
+        <Center>
+            <Stack maxW={'445px'}
+                   w={'full'}>
+                <Flex
+                    w={16}
+                    h={16}
+                    align={'center'}
+                    justify={'center'}
+                    color={'white'}
+                    rounded={'full'}
+                    bg={'gray.100'}
+                    mb={1}>
+                    {icon}
+                </Flex>
+                <Text fontWeight={600}>{title}</Text>
+                <Text color={'gray.600'}>{text}</Text>
+            </Stack>
+        </Center>
     );
 };
 
 export default function ColumnGrid() {
     return (
-        <Box p={4}>
+        <Box py={10}>
             <SimpleGrid columns={{base: 1, md: 3}} spacing={10}>
                 <Feature
                     icon={<Icon as={FcAssistant} w={10} h={10}/>}

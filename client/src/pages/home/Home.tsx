@@ -9,7 +9,7 @@ import {TypeCard} from "../../components/card/TypeCard";
 export const Home = () => {
     return <>
         <Carousel/>
-        <SimpleGrid columns={{base: 1, md: 4}} spacing={6}>
+        <SimpleGrid columns={{base: 1, md: 4}} spacing={10}>
             <TypeCard/>
             <TypeCard/>
             <TypeCard/>
