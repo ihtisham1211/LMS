@@ -1,25 +1,31 @@
 import React from "react"
-import {Box, Center, Flex, Text, useColorModeValue} from "@chakra-ui/react";
+import {Box, Center, Flex, Text} from "@chakra-ui/react";
 
-export const TypeCard = () => {
+interface Props {
+    name: string
+    icon: JSX.Element
+    backgroundColor: string
+}
+
+export const TypeCard = ({name, icon, backgroundColor}: Props) => {
     return <Center py={6}>
         <Box
-            maxW={'350px'}
+            maxW={'300px'}
             w={'full'}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={backgroundColor}
             boxShadow={'2xl'}
             rounded={'md'}
-            p={6}
+            p={5}
             overflow={'hidden'}>
             <Flex direction={'column'} justifyContent={'center'} alignItems={'center'}>
-                Icon
+                {icon}
                 <Text
-                    color={'green.500'}
+                    color={'white'}
                     textTransform={'uppercase'}
                     fontWeight={800}
                     fontSize={'sm'}
                     letterSpacing={1.1}>
-                    This is the text i need
+                    {name}
                 </Text>
             </Flex>
         </Box>
