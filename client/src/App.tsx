@@ -1,18 +1,16 @@
-import * as React from "react"
-import {ChakraProvider, theme,} from "@chakra-ui/react"
-import WithSubnavigation from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {Home} from "./pages/home/Home";
+import * as React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { Home } from './pages/Home';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 export const App = () => (
-    <ChakraProvider theme={theme}>
-        <WithSubnavigation/>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-            </Routes>
-        </BrowserRouter>
-        <Footer/>
-    </ChakraProvider>
-)
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+    <Footer />
+  </BrowserRouter>
+);
