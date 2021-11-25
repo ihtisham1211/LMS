@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { brandTitle } from '../utils/statics';
+import { brandTitle } from '../../utils/Constants/statics';
 
 export const Footer: FC = (): JSX.Element => {
   return (
@@ -10,11 +10,11 @@ export const Footer: FC = (): JSX.Element => {
             <div className="col-lg-3 col-md-6 footer-contact">
               <h3>{brandTitle}</h3>
               <p>
-                A108 Adam Street <br />
-                New York, NY 535022
+                address <br />
+                street
                 <br />
-                United States <br />
-                <strong>Phone:</strong> +1 5589 55488 55
+                Pakistan <br />
+                <strong>Phone:</strong> +92 313 1231231
                 <br />
                 <strong>Email:</strong> info@example.com
                 <br />
