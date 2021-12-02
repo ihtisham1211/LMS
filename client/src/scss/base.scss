@@ -1,0 +1,17 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import '../../src/assets/vendor/animate.css/animate.min.css';
+@import '../../src/assets/vendor/aos/aos.css';
+@import '../../src/assets/vendor/bootstrap-icons/bootstrap-icons.css';
+
+@import '../../src/assets/vendor/boxicons/css/boxicons.min.css';
+@import '../../src/assets/vendor/remixicon/remixicon.css';
+@import '../../src/assets/vendor/swiper/swiper-bundle.min.css';
+@import '../../src/assets/css/style.css';
+
+$primary: pink;
+$danger: #ff4136;
+
+$theme-colors: (
+        "primary": $primary,
+        "danger": $danger
+);

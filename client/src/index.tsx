@@ -3,16 +3,7 @@ import ReactDOM from 'react-dom';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/assets/vendor/animate.css/animate.min.css';
-import '../src/assets/vendor/aos/aos.css';
-// import "../src/assets/vendor/bootstrap/css/bootstrap.min.css";
-import '../src/assets/vendor/bootstrap-icons/bootstrap-icons.css';
-
-import '../src/assets/vendor/boxicons/css/boxicons.min.css';
-import '../src/assets/vendor/remixicon/remixicon.css';
-import '../src/assets/vendor/swiper/swiper-bundle.min.css';
-import '../src/assets/css/style.css';
+import './scss/base.scss';
 
 ReactDOM.render(
   <React.StrictMode>

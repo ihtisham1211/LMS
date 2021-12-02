@@ -19,7 +19,7 @@ export const Header: FC = (): JSX.Element => {
             {Routes.map((item) => {
               return (
                 <li onClick={() => setSelected(item.title)} key={uuid()}>
-                  <Link className={`${selected === item.title && 'active'}`} to={'/'}>
+                  <Link className={`${selected === item.title && 'active'}`} to={item.route}>
                     {item.title}
                   </Link>
                 </li>

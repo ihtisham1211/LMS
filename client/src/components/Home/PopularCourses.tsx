@@ -3,16 +3,13 @@ import { CourseCard } from '../Common/Cards/CourseCard';
 
 import demoCourse from '../../assets/img/course-3.jpg';
 import demoTeacher from '../../assets/img/trainers/trainer-2.jpg';
+import { Heading } from '../Common/Heading';
 
 export const PopularCourses: FC = (): JSX.Element => {
   return (
     <section id="popular-courses" className="courses">
       <div className="container">
-        <div className="section-title">
-          <h2>Courses</h2>
-          <p>Popular Courses</p>
-        </div>
-
+        <Heading title={'Courses'} paragraph={'Popular Courses'} />
         <div className="row">
           <CourseCard
             courseImg={demoCourse}
